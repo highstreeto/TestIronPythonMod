@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using TaleWorlds.Core;
@@ -16,6 +17,11 @@ namespace TestIronPythonMod
     public class MainSubModule : MBSubModuleBase
     {
         private IPythonModule pyModule;
+
+        public MainSubModule()
+        {
+            AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
+        }
 
         protected override void OnSubModuleLoad()
         {
@@ -64,6 +70,12 @@ namespace TestIronPythonMod
             base.OnGameLoaded(game, initializerObject);
         }
 
+        protected override void OnSubModuleUnloaded()
+        {
+            AppDomain.CurrentDomain.AssemblyResolve -= CurrentDomain_AssemblyResolve;
+            base.OnSubModuleUnloaded();
+        }
+
         private void CallPython(Action<IPythonModule> func, [CallerMemberNameAttribute] string memberName = null)
         {
             try
@@ -73,6 +85,22 @@ namespace TestIronPythonMod
             catch (MissingMemberException)
             {
                 System.Diagnostics.Debug.WriteLine($"Python module does not implement '{memberName}'!");
+            }
+        }
+
+        private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            var assembly = new AssemblyName(args.Name);
+            switch (assembly.Name)
+            {
+                case "IronPython":
+                case "IronPython.Modules":
+                case "Microsoft.Scripting":
+                    return Assembly.LoadFrom(
+                        Path.Combine("mono", "lib", "ironpython", $"{assembly.Name}.dll")
+                    );
+                default:
+                    return null;
             }
         }
 
