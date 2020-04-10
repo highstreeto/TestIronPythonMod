@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestIronPythonMod.Hook", "src\TestIronPythonMod.Hook.csproj", "{675A8290-8324-40AA-8679-02CE50B48BE5}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TestIronPythonMod", "src\TestIronPythonMod.pyproj", "{06E0D1A6-7FA0-450F-AE9F-B692FA15162E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{713701D7-1FE3-4315-8552-2AC65089485F}"
+	ProjectSection(SolutionItems) = preProject
+		SubModule.xml = SubModule.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Debug|x64.ActiveCfg = Debug|x64
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Debug|x64.Build.0 = Debug|x64
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Release|x64.ActiveCfg = Release|x64
+		{675A8290-8324-40AA-8679-02CE50B48BE5}.Release|x64.Build.0 = Release|x64
+		{06E0D1A6-7FA0-450F-AE9F-B692FA15162E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E0D1A6-7FA0-450F-AE9F-B692FA15162E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{06E0D1A6-7FA0-450F-AE9F-B692FA15162E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E0D1A6-7FA0-450F-AE9F-B692FA15162E}.Release|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC0BAE98-2A40-4FE6-A3D3-CD05D4F80CD8}
+	EndGlobalSection
+EndGlobal
