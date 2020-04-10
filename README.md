@@ -9,7 +9,11 @@ A proof-of-concept of using Python (via IronPython) for modding Bannerlord
 
 ## Architecture
 
-C# Hook which:
+Consists of the following parts:
+* C# hook
+* Python file (run via IronPython)
+
+The C# Hook does:
 1. Instantiates the IronPython runtime
 2. Add the needed assemblies to the runtime
 3. Finds the python file (in DEBUG looks in project folder, else same location as DLL)
