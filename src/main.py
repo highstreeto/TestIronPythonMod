@@ -5,8 +5,6 @@ from TaleWorlds.Library import Colors
 from TestIronPythonMod import IPythonModule
 
 class Module(IPythonModule):
-    def OnSubModuleLoad(self):
-        pass
     def OnBeforeInitialModuleScreenSetAsRoot(self):
         msg = InformationMessage("Hello from Python!")
         msg.Color = Colors.Green
