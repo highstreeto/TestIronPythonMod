@@ -4,7 +4,7 @@ A proof-of-concept of using Python (via IronPython) for modding Bannerlord
 
 ## Requirements
 
-* [IronPython](https://ironpython.net/download/)
+* [IronPython](https://ironpython.net/download/) (not strictly needed as a version is under `mono\lib\ironpython`)
 * Data Science Workload (useful for Python VS projects but not needed)
 
 ## Architecture
